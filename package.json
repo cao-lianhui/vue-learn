@@ -1,0 +1,20 @@
+{
+  "name": "vue-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "learn:vue2-slots": "pnpm --filter @learn/vue2-slots serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KILL4M/vue-learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KILL4M/vue-learn/issues"
+  },
+  "homepage": "https://github.com/KILL4M/vue-learn#readme"
+}
