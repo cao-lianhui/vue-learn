@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <h1>透传插槽</h1>
+      <PassthroughSlots />
+    </div>
+
+    <div>
+      <h1>作用域插槽</h1>
+      <ScopedSlots />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PassthroughSlots from './views/passthrough-slots/index.vue'
+import ScopedSlots from './views/scoped-slots/index.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    PassthroughSlots,
+    ScopedSlots,
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
