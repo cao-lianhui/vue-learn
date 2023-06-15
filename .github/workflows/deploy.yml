@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        node-version: '16'
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
@@ -25,7 +27,7 @@ jobs:
         pnpm docs:build  # 根据你的项目需要执行构建步骤
 
         # 部署到 gh-pages 分支
-        git config --global user.name ${{ secrets.GITHUB_ACTOR }}
+        git config --global user.name bygsn
         git config --global user.email 2167193766@qq.com
         git checkout --orphan gh-pages
         git rm -rf .
