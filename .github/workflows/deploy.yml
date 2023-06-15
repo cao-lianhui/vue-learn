@@ -21,6 +21,8 @@ jobs:
         node-version: '16'
 
     - name: Build and Deploy
+      env:
+        ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
         npm i -g pnpm@6.30.1
         pnpm i
@@ -30,8 +32,8 @@ jobs:
         git config --global user.name bygsn
         git config --global user.email 2167193766@qq.com
         git checkout --orphan gh-pages
-        # git rm -rf .
-        cp -r docs/.vitepress/dist .
+        git rm -rf .
+        git checkout main -- docs/.vitepress/dist
         git add .
         git commit -m "Deploy docs to gh-pages"
         git push -f origin gh-pages
