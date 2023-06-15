@@ -2,6 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  // 项目基地址
+  base: '/vue-learn/',
+
   // 页面顶部标题
   title: "Frontend Learning",
 
