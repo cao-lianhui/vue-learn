@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "learn:vue2-slots": "pnpm --filter @learn/vue2-slots serve"
+    "learn:vue2-slots": "pnpm --filter @learn/vue2-slots serve",
+    "docs:dev": "pnpm --filter @learn/docs docs:dev",
+    "docs:build": "pnpm --filter @learn/docs docs:build",
+    "docs:preview": "pnpm --filter @learn/docs docs:preview"
   },
   "repository": {
     "type": "git",
