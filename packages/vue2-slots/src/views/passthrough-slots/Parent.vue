@@ -1,6 +1,6 @@
 <template>
   <div style="margin: 10px; border: 1px solid black">
-    <h2>parent</h2>
+    <div>组件B</div>
 
     <!-- 插槽透传 -->
     <Child>
@@ -10,7 +10,8 @@
     </Child>
 
     <!-- 等价于 -->
-    <!-- <Child>
+    <!--
+    <Child>
       <template slot="before">
         <slot name="before"></slot>
       </template>
@@ -20,7 +21,8 @@
       <template slot="after">
         <slot name="after"></slot>
       </template>
-    </Child> -->
+    </Child>
+    -->
   </div>
 </template>
 

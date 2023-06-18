@@ -1,15 +1,15 @@
 <template>
   <div style="margin: 10px; border: 1px solid black">
-    <h2>child</h2>
+    <div>组件C</div>
 
     <slot name="before">
-      <div>before 插槽</div>
+      <div>子组件中before插槽</div>
     </slot>
     <slot>
-      <div>默认内容</div>
+      <div>子组件中默认插槽</div>
     </slot>
     <slot name="after">
-      <div>after 插槽</div>
+      <div>子组件中after插槽</div>
     </slot>
   </div>
 </template>

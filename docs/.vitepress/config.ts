@@ -26,8 +26,19 @@ export default defineConfig({
       '/demo/': [
         {
           text: 'Vue2',
+          collapsed: true,
           items: [
             { text: 'Vue2 Slots 的使用', link: '/demo/vue/vue2-slots.md' },
+            { text: 'Vue2 Slots 的使用', link: '/demo/vue/vue2-slots.md' },
+            { text: 'Vue2 Slots 的使用', link: '/demo/vue/vue2-slots.md' },
+          ]
+        },
+        {
+          text: 'react',
+          items: [
+            { text: '1', link: '/demo/vue/vue2-slots.md' },
+            { text: 'Vue2 Slots 的使2用', link: '/demo/vue/vue2-slots.md' },
+            { text: 'Vue2 Slots 的使3用', link: '/demo/vue/vue2-slots.md' },
           ]
         },
       ],
@@ -40,6 +51,6 @@ export default defineConfig({
     // 导航栏的的社交链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/KILL4M/vue-learn' }
-    ]
-  }
+    ],
+  },
 })
