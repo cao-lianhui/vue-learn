@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -51,6 +52,17 @@ export default defineConfig({
     // 导航栏的的社交链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/KILL4M/vue-learn' }
+<<<<<<< Updated upstream
     ],
   },
+=======
+    ]
+  },
+
+  markdown: {
+    config(md) {
+      md.use(tabsMarkdownPlugin)
+    }
+  }
+>>>>>>> Stashed changes
 })
