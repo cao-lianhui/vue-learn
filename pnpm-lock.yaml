@@ -8,8 +8,12 @@ importers:
   docs:
     specifiers:
       vitepress: ^1.0.0-beta.2
+      vitepress-plugin-tabs: ^0.3.0
+      vue: ^3.3.4
     devDependencies:
       vitepress: registry.npmmirror.com/vitepress/1.0.0-beta.2
+      vitepress-plugin-tabs: registry.npmmirror.com/vitepress-plugin-tabs/0.3.0_vitepress@1.0.0-beta.2+vue@3.3.4
+      vue: registry.npmmirror.com/vue/3.3.4
 
   packages/vue2-slots:
     specifiers:
@@ -11242,6 +11246,19 @@ packages:
       rollup: registry.npmmirror.com/rollup/3.25.1
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  registry.npmmirror.com/vitepress-plugin-tabs/0.3.0_vitepress@1.0.0-beta.2+vue@3.3.4:
+    resolution: {integrity: sha512-3dKsBuP6PDzcFHgUtNCwwCs3bYoZduj7AcQkT9JfAKTRAKPCNmjiNInPT3IZ7AihL0SJNoQ3liz/e97z8oo+XA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress-plugin-tabs/-/vitepress-plugin-tabs-0.3.0.tgz}
+    id: registry.npmmirror.com/vitepress-plugin-tabs/0.3.0
+    name: vitepress-plugin-tabs
+    version: 0.3.0
+    peerDependencies:
+      vitepress: ^1.0.0-beta.2
+      vue: ^3.3.4
+    dependencies:
+      vitepress: registry.npmmirror.com/vitepress/1.0.0-beta.2
+      vue: registry.npmmirror.com/vue/3.3.4
     dev: true
 
   registry.npmmirror.com/vitepress/1.0.0-beta.2:

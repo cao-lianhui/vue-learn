@@ -2,6 +2,8 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import './style.css'
+import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
+import HelloWorld from './HelloWorld.vue'
 
 export default {
   ...Theme,
@@ -12,5 +14,9 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
-  }
+    app.component('HelloWorld', HelloWorld)
+
+    // vitepress-plugin-tabs
+    enhanceAppWithTabs(app)
+  },
 }

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
@@ -12,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "^1.0.0-beta.2"
+    "vitepress": "^1.0.0-beta.2",
+    "vitepress-plugin-tabs": "^0.3.0",
+    "vue": "^3.3.4"
   }
 }
