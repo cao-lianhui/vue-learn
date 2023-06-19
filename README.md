@@ -43,9 +43,9 @@ pnpm 支持直接使用 workspace 构建 mono-repo 项目（一个仓库下同�
 ```yaml
 packages:
   # packages 下的所有目录都分别作为独立子项目
-  - "packages/*"
+  - 'packages/*'
   # docs 目录作为一个子项目
-  - "docs"
+  - docs
 ```
 
 2. mono-repo 将整个项目视为一个 workspace，理解为由根目录管理众多子项目
@@ -105,7 +105,7 @@ packages:
     "docs:dev": "pnpm --filter @learn/docs docs:dev",
     "docs:build": "pnpm --filter @learn/docs docs:build",
     "docs:preview": "pnpm --filter @learn/docs docs:preview"
-  },
+  }
   // ...
 }
 ```
@@ -205,7 +205,7 @@ export default defineConfig({
     ],
   },
   // ...
-}
+})
 ```
 
 - `themeConfig.sidebar`：页面侧边栏
@@ -233,7 +233,7 @@ export default defineConfig({
     },
   },
   // ...
-}
+})
 ```
 
 
@@ -264,7 +264,6 @@ export default {
     app.component('HelloWorld', HelloWorld)
   },
 }
-
 ```
 
 3. 在你的文档中使用，如 `demo/index.md`

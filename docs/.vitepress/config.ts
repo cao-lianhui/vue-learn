@@ -7,10 +7,10 @@ export default defineConfig({
   base: '/vue-learn/',
 
   // 页面顶部标题
-  title: "Frontend Learning",
+  title: 'Frontend Learning',
 
   // 首页描述，这个会被 index.md 覆盖
-  description: "首页描述首页描述首页描述首页描述",
+  description: '首页描述首页描述首页描述首页描述',
 
   // 主题配置：一般是导航栏、侧边栏、社交链接等
   themeConfig: {
@@ -32,7 +32,7 @@ export default defineConfig({
             { text: 'Vue2 Slots 的使用', link: '/demo/vue/vue2-slots.md' },
             { text: 'Vue2 Slots 的使用', link: '/demo/vue/vue2-slots.md' },
             { text: 'Vue2 Slots 的使用', link: '/demo/vue/vue2-slots.md' },
-          ]
+          ],
         },
         {
           text: 'react',
@@ -40,7 +40,7 @@ export default defineConfig({
             { text: '1', link: '/demo/vue/vue2-slots.md' },
             { text: 'Vue2 Slots 的使2用', link: '/demo/vue/vue2-slots.md' },
             { text: 'Vue2 Slots 的使3用', link: '/demo/vue/vue2-slots.md' },
-          ]
+          ],
         },
       ],
 
@@ -51,18 +51,13 @@ export default defineConfig({
 
     // 导航栏的的社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/KILL4M/vue-learn' }
-<<<<<<< Updated upstream
+      { icon: 'github', link: 'https://github.com/KILL4M/vue-learn' },
     ],
-  },
-=======
-    ]
   },
 
   markdown: {
     config(md) {
       md.use(tabsMarkdownPlugin)
-    }
-  }
->>>>>>> Stashed changes
+    },
+  },
 })
