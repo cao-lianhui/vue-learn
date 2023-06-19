@@ -1,11 +1,30 @@
+<script>
+import Child from './Child.vue'
+
+export default {
+  name: 'Parent',
+  components: {
+    Child,
+  },
+  data() {
+    return {
+
+    }
+  },
+  mounted() {
+    console.log(this.$slots, 'parent')
+  },
+}
+</script>
+
 <template>
   <div style="margin: 10px; border: 1px solid black">
     <div>组件B</div>
 
     <!-- 插槽透传 -->
     <Child>
-      <template v-for="(slot, name) in $scopedSlots" #[name]="scope">
-        <slot :name="name" v-bind="scope"></slot>
+      <template v-for="(slot, name) in $slots" #[name]="scope">
+        <slot :name="name" v-bind="scope" />
       </template>
     </Child>
 
@@ -25,22 +44,3 @@
     -->
   </div>
 </template>
-
-<script>
-import Child from './Child.vue'
-
-export default {
-  name: 'parent',
-  components: {
-    Child,
-  },
-  data() {
-    return {
-
-    }
-  },
-  mounted() {
-    console.log(this.$scopedSlots, 'parent');
-  }
-}
-</script>

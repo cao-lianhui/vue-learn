@@ -1,3 +1,14 @@
+<script>
+import Parent from './Parent.vue'
+
+export default {
+  name: 'PassthroughSlots',
+  components: {
+    Parent,
+  },
+}
+</script>
+
 <template>
   <div>
     <h3>使用类型二 三个组件 scoped slots</h3>
@@ -8,30 +19,25 @@
     <div class="case3">
       组件A
       <Parent>
-        <template slot="before">
-          <div style="color: blue">组件A中before slot</div>
+        <template #before>
+          <div style="color: blue">
+            组件A中before slot
+          </div>
         </template>
         <template>
-          <div style="color: red">组件A中default slot</div>
+          <div style="color: red">
+            组件A中default slot
+          </div>
         </template>
         <template #after>
-          <div style="color: #0a8572">组件A中after slot</div>
+          <div style="color: #0a8572">
+            组件A中after slot
+          </div>
         </template>
       </Parent>
     </div>
   </div>
 </template>
-
-<script>
-import Parent from './Parent.vue'
-
-export default {
-  name: 'passthrough-slots',
-  components: {
-    Parent,
-  },
-}
-</script>
 
 <style scoped>
 .case3 {

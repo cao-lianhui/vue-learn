@@ -4,9 +4,9 @@ name: Deploy docs to Github Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: [main]
     paths:
-      - "docs/**"
+      - 'docs/**'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -35,9 +35,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './docs/.vitepress/dist'
+          path: ./docs/.vitepress/dist
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: './docs/.vitepress/dist'
+          folder: ./docs/.vitepress/dist

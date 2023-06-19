@@ -1,9 +1,22 @@
+<script>
+import PassthroughSlots from './views/passthrough-slots/index.vue'
+import ScopedSlots from './views/scoped-slots/index.vue'
+
+export default {
+  name: 'App',
+  components: {
+    PassthroughSlots,
+    ScopedSlots,
+  },
+}
+</script>
+
 <template>
   <div id="app">
     <div>
       <h2>一 插槽基础概念</h2>
-<p>概括说明-用于面试:</p>
-<pre>
+      <p>概括说明-用于面试:</p>
+      <pre>
 slot 是什么？有什么作用？原理是什么？
 
 slot 又名插槽，是 Vue 的内容分发机制，组件内部的模板引擎使用 slot 元素作为承载分发内容的出口。slot 是子组件的一个模板标签元素，而这一个标签元素是否显示，以及怎么显示是由父组件决定的。slot 又分三类，默认插槽，具名插槽和作用域插槽：
@@ -16,10 +29,10 @@ slot 又名插槽，是 Vue 的内容分发机制，组件内部的模板引擎�
 使用场景：定义组件的默认内容，提供外部组件调用时定制该组件的渲染内容能力
 </pre>
 
-<p>详细说明-用于理解:</p>
-<pre>
+      <p>详细说明-用于理解:</p>
+      <pre>
 1. 是什么 有什么用
-插槽是子组件中的提供给父组件使用的一个占位符，在子组件中用slot标签对表示，父组件可以在这个占位符中填充任何模板代码，如 HTML、组件等，填充的内容会替换子组件的<slot></slot>标签中的所有内容。简单理解就是子组件中留下个“坑”，父组件可以使用指定内容来填“坑”。
+插槽是子组件中的提供给父组件使用的一个占位符，在子组件中用slot标签对表示，父组件可以在这个占位符中填充任何模板代码，如 HTML、组件等，填充的内容会替换子组件的<slot />标签中的所有内容。简单理解就是子组件中留下个“坑”，父组件可以使用指定内容来填“坑”。
 概括: 插槽是写在子组件里的一个slot标签对
 作用: 让父组件可以向子组件指定位置插入html结构，也是一种组件间通信的方式，适用于将子组件中的数据传递给父组件  子组件 ===> 父组件
 一 slot标签对:
@@ -50,17 +63,16 @@ slot元素上的 attribute 如 :person="person" :games="games"都是插槽prop
 1) slot标签和template都不会在页面上显示
 
 </pre>
-
     </div>
     <h2>二 demo展示效果 具体说明概念</h2>
     <p>需要展示哪个case 就把对应的父组件和子组件里的div名字叫case1的注释掉的区域放开 查看效果 加上手动调试 增进理解</p>
     <div>
-<!--      使用类型一: 两个组件-->
+      <!--      使用类型一: 两个组件 -->
       <ScopedSlots />
     </div>
 
     <div>
-    <!-- 使用类型二: 多个组件 透传插槽 -->
+      <!-- 使用类型二: 多个组件 透传插槽 -->
       <PassthroughSlots />
     </div>
 
@@ -78,19 +90,6 @@ slot元素上的 attribute 如 :person="person" :games="games"都是插槽prop
     </div>
   </div>
 </template>
-
-<script>
-import PassthroughSlots from './views/passthrough-slots/index.vue'
-import ScopedSlots from './views/scoped-slots/index.vue'
-
-export default {
-  name: 'App',
-  components: {
-    PassthroughSlots,
-    ScopedSlots,
-  },
-}
-</script>
 
 <style>
 #app {
