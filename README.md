@@ -1,15 +1,3 @@
-<<<<<<< Updated upstream
-# README
-
-## 配置说明
-- 启动项目命令 
-
-```pnpm
-启动packages目录中的vue2-slots项目: pnpm learn:vue2-slots
-```
-
-- [文档链接](https://kill4m.github.io/vue-learn/)
-=======
 ## pnpm
 
 
@@ -295,4 +283,3 @@ export default {
 - 支持插件：支持自定义或使用官方/第三方插件，如本项目配置了 [vitepress-plugins-tabs](https://vitepress-plugins.sapphi.red/tabs/) 插件
 - 支持组件库：支持安装 vue3 组件库，用来定义更丰富的界面
 - ...
->>>>>>> Stashed changes
