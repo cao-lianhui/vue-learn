@@ -1,3 +1,17 @@
+<script>
+export default {
+  name: 'Child',
+  data() {
+    return {
+
+    }
+  },
+  mounted() {
+    console.log(this.$slots, 'child')
+  },
+}
+</script>
+
 <template>
   <div style="margin: 10px; border: 1px solid black">
     <div>组件C</div>
@@ -13,17 +27,3 @@
     </slot>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'child',
-  data() {
-    return {
-
-    }
-  },
-  mounted() {
-    console.log(this.$scopedSlots, 'child');
-  }
-}
-</script>

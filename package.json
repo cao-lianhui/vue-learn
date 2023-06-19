@@ -2,22 +2,41 @@
   "name": "vue-learn",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/KILL4M/vue-learn#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KILL4M/vue-learn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KILL4M/vue-learn/issues"
+  },
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "learn:vue2-slots": "pnpm --filter @learn/vue2-slots serve",
     "docs:dev": "pnpm --filter @learn/docs docs:dev",
     "docs:build": "pnpm --filter @learn/docs docs:build",
-    "docs:preview": "pnpm --filter @learn/docs docs:preview"
+    "docs:preview": "pnpm --filter @learn/docs docs:preview",
+    "commit": "cz",
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KILL4M/vue-learn.git"
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.5",
+    "commitizen": "^4.3.0",
+    "eslint": "^8.43.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KILL4M/vue-learn/issues"
+  "lint-staged": {
+    "*": "eslint . --fix"
   },
-  "homepage": "https://github.com/KILL4M/vue-learn#readme"
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
