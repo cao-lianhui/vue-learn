@@ -16,6 +16,7 @@
   "main": "index.js",
   "scripts": {
     "learn:vue2-slots": "pnpm --filter @learn/vue2-slots serve",
+    "dev:vue2-comp": "pnpm --filter @learn/vue2-comp serve",
     "docs:dev": "pnpm --filter @learn/docs docs:dev",
     "docs:build": "pnpm --filter @learn/docs docs:build",
     "docs:preview": "pnpm --filter @learn/docs docs:preview",
