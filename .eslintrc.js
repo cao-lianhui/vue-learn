@@ -11,6 +11,8 @@ module.exports = {
     },
   ],
   rules: {
+    'slintvue/no-deprecated-v-bind-sync': 'off',
+
     'no-console': 'warn',
     'vue/no-unused-components': 'warn',
   },

@@ -2,45 +2,19 @@
   <div class="modal">
     <h1>对话框/弹框 Modal</h1>
     <p>需要用户处理信息，同时又不希望用跳转新页面的方式打断工作流程时使用</p>
-    <p class="common-title">基本用法</p>
+    <p class="common-title">
+      基本用法
+    </p>
     <p>弹窗基础组件 只有打开关闭的最少代码的逻辑控制 无内容</p>
     <div class="modal-content">
-      <Button type="default" @click="handleOpenModalTemp('default')">点击演示</Button>
+      <Button type="default" @click="handleOpenModalTemp('default')">
+        点击演示
+      </Button>
       <Collapse v-model="detailValue1" class="collapse">
         <Panel name="1">
           代码思路讲解
-          <pre slot="content">
-            组件位置关系:
-              当前组件=父组件 弹窗组件=子组件 Modal组件=子组件中的子组件
-              在当前组件中使用弹窗组件 弹窗组件中使用iview的Modal组件
-            实现控制弹窗开关最简化代码:
-              父组件中: 给子组件ModalTemp绑定v-model 值是showTempModal
-              子组件中: 给子组件Modal绑定v-bind="$attrs" v-on="$listeners"
-            打开关闭弹窗具体代码:
-              打开弹窗: 父组件 this.showTempModal = true
-              关闭弹窗: 子组件 this.$emit('input', false)
-            代码讲解:
-            v-model  this.$emit('input', false) v-bind="$attrs" v-on="$listeners"
-            1. v-model
-            2. this.$emit('input', false)
-            3. v-bind="$attrs"
-            4. v-on="$listeners"
-          </pre>
-        </Panel>
-      </Collapse>
-    </div>
-    <p class="common-title">应用场景: 树+表格+动态表单项+弹窗+校验 这个没有图片说明不太好写 等会写吧</p>
-    <p>如下图 点击左侧树元素 查询对应的表格行数据和列数据 点击新增一行按钮 打开新增一行弹窗 填写数据 点击确定时校验 校验通过后就调用新增接口新增数据 然后关闭弹窗</p>
-    <p>这里只写按钮</p>
-<!--     图床咋搞 拖拽上传图片的腾讯云图床 -->
-    <img src="" class="title-img">
-    <div class="modal-content">
-      <Button type="default" @click="handleOpenModalTemp('one')">点击演示-表单一</Button>
-      <Button type="default" @click="handleOpenModalTemp('two')">点击演示-表单二</Button>
-      <Collapse v-model="detailValue2" class="collapse">
-        <Panel name="1">
-          代码思路讲解
-          <pre slot="content">
+          <template #content>
+            <pre>
               组件位置关系:
                 当前组件=父组件 弹窗组件=子组件 Modal组件=子组件中的子组件
                 在当前组件中使用弹窗组件 弹窗组件中使用iview的Modal组件
@@ -57,6 +31,46 @@
               3. v-bind="$attrs"
               4. v-on="$listeners"
             </pre>
+          </template>
+        </Panel>
+      </Collapse>
+    </div>
+    <p class="common-title">
+      应用场景: 树+表格+动态表单项+弹窗+校验 这个没有图片说明不太好写 等会写吧
+    </p>
+    <p>如下图 点击左侧树元素 查询对应的表格行数据和列数据 点击新增一行按钮 打开新增一行弹窗 填写数据 点击确定时校验 校验通过后就调用新增接口新增数据 然后关闭弹窗</p>
+    <p>这里只写按钮</p>
+    <!--     图床咋搞 拖拽上传图片的腾讯云图床 -->
+    <img src="" class="title-img">
+    <div class="modal-content">
+      <Button type="default" @click="handleOpenModalTemp('one')">
+        点击演示-表单一
+      </Button>
+      <Button type="default" @click="handleOpenModalTemp('two')">
+        点击演示-表单二
+      </Button>
+      <Collapse v-model="detailValue2" class="collapse">
+        <Panel name="1">
+          代码思路讲解
+          <template #content>
+            <pre>
+                组件位置关系:
+                  当前组件=父组件 弹窗组件=子组件 Modal组件=子组件中的子组件
+                  在当前组件中使用弹窗组件 弹窗组件中使用iview的Modal组件
+                实现控制弹窗开关最简化代码:
+                  父组件中: 给子组件ModalTemp绑定v-model 值是showTempModal
+                  子组件中: 给子组件Modal绑定v-bind="$attrs" v-on="$listeners"
+                打开关闭弹窗具体代码:
+                  打开弹窗: 父组件 this.showTempModal = true
+                  关闭弹窗: 子组件 this.$emit('input', false)
+                代码讲解:
+                v-model  this.$emit('input', false) v-bind="$attrs" v-on="$listeners"
+                1. v-model
+                2. this.$emit('input', false)
+                3. v-bind="$attrs"
+                4. v-on="$listeners"
+              </pre>
+          </template>
         </Panel>
       </Collapse>
     </div>
@@ -73,9 +87,10 @@
 </template>
 
 <script>
-import ModalTemp from "./components/ModalTemp";
-import DynamicFormModal from "./components/DynamicFormModal";
-import { dynamicForm1, dynamicForm2 } from "./data.js"
+import ModalTemp from './components/ModalTemp'
+import DynamicFormModal from './components/DynamicFormModal'
+import { dynamicForm1, dynamicForm2 } from './data.js'
+
 export default {
   components: { DynamicFormModal, ModalTemp },
   data() {
@@ -98,7 +113,6 @@ export default {
       // })
     },
     handleAddDynamicForm(source) {
-
       /**
        *
        1. @get-data="@get-data="$emit('get-data',$event)"
@@ -133,20 +147,21 @@ export default {
        接口返回200 就loading结束 然后提示新增成功 然后关闭弹窗 √  组件外=父组件(调用接口 暴露接口返回数据给组件) + 组件内(控制loading和弹窗关闭)
        接口返回其他 就loading结束 然后提示新增失败 然后不关闭弹窗 √ 组件外=父组件(调用接口 暴露接口返回数据给组件) + 组件内(控制loading和弹窗关闭)
        */
-      console.log(source,'source')
+      console.log(source, 'source')
       this.dynamicForm = source
       // this.showDynamicFormModal = true
     },
     handleOpenModalTemp(type) {
-      if(type === 'default') {
+      if (type === 'default')
         this.showTempModal = true
-      } else if(type === 'one') {
+
+      else if (type === 'one')
         this.handleAddDynamicForm(dynamicForm1)
-      } else if(type === 'two') {
+
+      else if (type === 'two')
         this.handleAddDynamicForm(dynamicForm2)
-      }
-    }
-  }
+    },
+  },
 }
 </script>
 

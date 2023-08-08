@@ -7,18 +7,29 @@
       v-bind="$attrs"
       v-on="$listeners"
     >
-      <div slot="header" class="modal-header">
-        <div class="header-title">新增一条</div>
-      </div>
+      <template #header>
+        <div class="modal-header">
+          <div class="header-title">
+            新增一条
+          </div>
+        </div>
+      </template>
       <div class="modal-content">
         弹窗内容区域
       </div>
-      <div slot="footer" class="modal-footer">
-        <div>
-          <Button class="cancel-btn" :loading="loading" @click="handleCancel">取消</Button>
-          <Button :loading="loading" class="add-btn" @click="handleSubmit" type="primary">添加</Button>
+
+      <template #footer>
+        <div class="modal-footer">
+          <div>
+            <Button class="cancel-btn" :loading="loading" @click="handleCancel">
+              取消
+            </Button>
+            <Button :loading="loading" class="add-btn" type="primary" @click="handleSubmit">
+              添加
+            </Button>
+          </div>
         </div>
-      </div>
+      </template>
     </Modal>
   </div>
 </template>
@@ -38,12 +49,12 @@ export default {
     }
   },
   watch: {
-    "$attrs.value"(val) {
-      if(val) {
+    '$attrs.value': function (val) {
+      if (val) {
         // 初始化表单值
         // this.modelForm = JSON.parse(JSON.stringify(this.form))
       }
-    }
+    },
   },
   methods: {
     /**
@@ -57,15 +68,15 @@ export default {
      */
     handleSubmit() {
       this.$emit('input', false)
-    }
-  }
+    },
+  },
 }
 </script>
+
 <!--
 //@import '@/style/iViewDeep.scss';
 // less 怎么转scss?
 //.title-style-mixin;
-
 
 -->
 <style lang="scss" scoped>
