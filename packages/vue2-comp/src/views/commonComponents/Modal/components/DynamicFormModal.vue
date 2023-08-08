@@ -8,22 +8,32 @@
       v-bind="$attrs"
       v-on="$listeners"
     >
-      <div slot="header" class="modal-header">
-        <div class="header-title">新增一条</div>
-      </div>
+      <template #header>
+        <div class="modal-header">
+          <div class="header-title">
+            新增一条
+          </div>
+        </div>
+      </template>
       <div class="modal-content">
         <Form :label-width="120">
           <FormItem v-for="(item, index) in modelForm" :key="index" :label="item.title">
-            <Input v-model="item.value" :placeholder="`请输入${item.title}`" maxlength="50"/>
+            <Input v-model="item.value" :placeholder="`请输入${item.title}`" maxlength="50" />
           </FormItem>
         </Form>
       </div>
-      <div slot="footer" class="modal-footer">
-        <div>
-          <Button class="cancel-btn" :loading="loading" @click="handleCancel">取消</Button>
-          <Button :loading="loading" class="add-btn" @click="handleSubmit" type="primary">添加</Button>
+      <template #footer>
+        <div class="modal-footer">
+          <div>
+            <Button class="cancel-btn" :loading="loading" @click="handleCancel">
+              取消
+            </Button>
+            <Button :loading="loading" class="add-btn" type="primary" @click="handleSubmit">
+              添加
+            </Button>
+          </div>
         </div>
-      </div>
+      </template>
     </Modal>
   </div>
 </template>
@@ -33,12 +43,12 @@ export default {
   props: {
     form: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     addRow: {
       type: Function,
       required: true,
-    }
+    },
   },
   data() {
     return {
@@ -47,11 +57,10 @@ export default {
     }
   },
   watch: {
-    "$attrs.value"(val) {
-      if(val) {
-        this.modelForm = JSON.parse(JSON.stringify(this.form)).map(v => ({...v, value: ''}))
-      }
-    }
+    '$attrs.value': function (val) {
+      if (val)
+        this.modelForm = JSON.parse(JSON.stringify(this.form)).map(v => ({ ...v, value: '' }))
+    },
   },
   methods: {
     /**
@@ -72,7 +81,7 @@ export default {
 
       const form = {}
 
-      this.modelForm.forEach(item => {
+      this.modelForm.forEach((item) => {
         form[item.key] = item.value
       })
 
@@ -83,13 +92,14 @@ export default {
         this.$Message.success(res)
         this.$emit('input', false)
         this.$emit('success')
-      } catch (error) {
+      }
+      catch (error) {
         this.$Message.error(error)
       }
       this.loading = false
-    }
+    },
 
-  }
+  },
 }
 </script>
 

@@ -28,8 +28,8 @@ const routes = [
   {
     path: '/routeTest/:id',
     name: 'RouteTest',
-    component: () => import ('../views/test/route-test/index.vue')
-  }
+    component: () => import ('../views/test/route-test/index.vue'),
+  },
 ]
 
 const router = new VueRouter({

@@ -50,7 +50,6 @@ export default {
           2) 父组件可以使用template #default="scope"语法拿到子组件中传过来的大对象 并将这个对象命名为scope，也可以使用任意其他名字 scope类似于函数形参
           3) 父组件可以不用子组件传过来的数据 只是替换子组件对应插槽的内容 template #default xxx emplate语法
 
-
           使用场景：定义组件的默认内容，提供外部组件调用时定制该组件的渲染内容能力
           其他需要注意的?
           1) slot标签和template都是空标签 在处理的过程中不会渲染成真实的DOM节点 跟div不一样 父组件中最好把v-slot写在template元素上 因为template元素在处理的过程中不会渲染成真实的DOM节点
@@ -62,8 +61,8 @@ export default {
     </div>
     <h2>二 从使用插槽的几个组件的组件关系来分 有两种组件关系</h2>
     <p>查看方式: 在父组件中需要查看哪一个代码示例的效果 就把父组件中这个代码的注释放开 再把子组件中与父组件中这个代码示例的class名字相同的代码的注释放开 就能调试并查看效果了</p>
-    <ScopedSlots/>
-    <PassthroughSlots/>
+    <ScopedSlots />
+    <PassthroughSlots />
     <div>
       <h2>三 实际开发中使用slot的例子</h2>
       <p>场景说明</p>

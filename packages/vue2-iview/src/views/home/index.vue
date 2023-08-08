@@ -1,15 +1,15 @@
 <script>
 export default {
-  name: 'Demo.vue',
+  data() {
+    return {
+
+    }
+  },
 }
 </script>
 
 <template>
   <div>
-    <template />字符串
+    <h1>home</h1>
   </div>
 </template>
-
-<style scoped>
-
-</style>
