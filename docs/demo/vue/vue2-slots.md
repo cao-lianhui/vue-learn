@@ -2,6 +2,14 @@
 
 ## 插槽基础概念
 
+
+| 指令 | v-slot | #(v-slot:的简写) | slot | slot-scope |    
+| --- | --- | --- | --- | --- |
+| √ |  | |
+| 标签 |  `<slot></slot>` | `<template></template>` |
+| √ |  | |
+| 关键字 | default |
+
 ### 概括说明-用于面试
 
 slot 是什么？有什么作用？原理是什么？

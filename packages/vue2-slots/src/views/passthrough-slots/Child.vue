@@ -7,7 +7,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$slots, 'child')
+    // console.log(this.$slots, 'child')
   },
 }
 </script>

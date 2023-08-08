@@ -2,11 +2,15 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import App from './App.vue'
 import router from './router'
+import iView from 'view-design'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'view-design/dist/styles/iview.css'
+
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+Vue.use(iView)
 
 new Vue({
   router,
