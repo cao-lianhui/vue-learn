@@ -1,0 +1,63 @@
+@main-color: #3654e2;
+// 模态框UI样式
+/deep/ .ivu-modal {
+  height: 720px;
+}
+/deep/ .ivu-modal-header {
+  background-color: #f2f6fa;
+}
+/deep/ .ivu-modal-close .ivu-icon-ios-close {
+  top: 10px;
+}
+/deep/ .ivu-modal-footer {
+  padding: unset;
+  border-top: unset;
+}
+/deep/ .ivu-modal-header {
+  padding: 0;
+  padding-left: 30px;
+  border: unset;
+}
+/deep/ .ivu-modal-body {
+  padding: 0;
+}
+/deep/ .ivu-form-item:last-child {
+  margin: 0;
+}
+// Tabs样式
+/deep/ .ivu-tabs-bar {
+  border: unset;
+}
+
+/deep/ .ivu-tabs-nav .ivu-tabs-tab:hover {
+  color: @main-color;
+}
+
+/deep/ .ivu-tabs-nav-wrap {
+  background-color: #f5f6fd;
+}
+
+/deep/ .ivu-tabs-tab {
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #041529;
+}
+
+/deep/ .ivu-tabs-tab-active {
+  font-size: 18px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #3654e2;
+}
+/deep/ .ivu-tabs-ink-bar {
+  background-color: #3654e2;
+}
+// Form
+/deep/ .ivu-input {
+  height: 40px;
+}
+
+/deep/ .ivu-radio-inner:after {
+  background-color: @main-color;
+}

@@ -12,7 +12,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$slots, 'parent')
+    // console.log(this.$slots, 'parent')
   },
 }
 </script>
