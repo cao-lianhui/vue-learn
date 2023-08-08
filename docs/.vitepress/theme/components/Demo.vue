@@ -1,14 +1,14 @@
-<template>
-<div>
-  <template></template>字符串
-</div>
-</template>
-
 <script>
 export default {
-  name: "Demo.vue"
+  name: 'Demo.vue',
 }
 </script>
+
+<template>
+  <div>
+    <template />字符串
+  </div>
+</template>
 
 <style scoped>
 

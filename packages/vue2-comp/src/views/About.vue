@@ -14,8 +14,8 @@
 </template>
 
 <script>
-
 import Carousel from '@/components/common/Carousel.vue'
+
 export default {
   components: {
     Carousel,
@@ -69,7 +69,6 @@ export default {
 
    */
 
-
   // 知识点:
   // 所有的padding和 margin就是相对于父元素的content宽度来计算的(全部都是宽度 不是高度)
 
@@ -87,4 +86,3 @@ export default {
   }
 }
 </style>
-
