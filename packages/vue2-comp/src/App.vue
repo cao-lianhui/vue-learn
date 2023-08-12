@@ -1,10 +1,18 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/about"> 基础元件 </router-link> |
-      <router-link to="/modal"> 常用组件 </router-link> |
-      <router-link to="/base"> html css基础 </router-link>
-      <router-link to="/webapi"> webapi </router-link>
+      <router-link to="/about">
+        基础元件
+      </router-link> |
+      <router-link to="/modal">
+        常用组件
+      </router-link> |
+      <router-link to="/base">
+        html css基础
+      </router-link>
+      <router-link to="/webapi">
+        webapi
+      </router-link>
     </div>
     <router-view />
   </div>
