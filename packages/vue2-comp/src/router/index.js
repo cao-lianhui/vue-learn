@@ -1,39 +1,44 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue'),
+    path: "/about",
+    name: "About",
+    component: () => import("../views/About.vue"),
   },
   {
-    path: '/modal',
-    name: 'Modal',
-    component: () => import('../views/commonComponents/Modal/index.vue'),
+    path: "/modal",
+    name: "Modal",
+    component: () => import("../views/commonComponents/Modal/index.vue"),
   },
   {
-    path: '/base',
-    name: 'Base',
-    component: () => import('../views/baseComponents/TagA/index.vue'),
+    path: "/base",
+    name: "Base",
+    component: () => import("../views/baseComponents/TagA/index.vue"),
   },
   {
-    path: '/routeTest/:id',
-    name: 'RouteTest',
-    component: () => import ('../views/test/route-test/index.vue'),
+    path: "/routeTest/:id",
+    name: "RouteTest",
+    component: () => import("../views/test/route-test/index.vue"),
   },
-]
+  {
+    path: "/webapi",
+    name: "Webapi",
+    component: () => import("../views/webapi/index.vue"),
+  },
+];
 
 const router = new VueRouter({
   routes,
-})
+});
 
-export default router
+export default router;

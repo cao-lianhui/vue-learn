@@ -1,15 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/about">
-        基础元件
-      </router-link> |
-      <router-link to="/modal">
-        常用组件
-      </router-link> |
-      <router-link to="/base">
-        html css基础
-      </router-link>
+      <router-link to="/about"> 基础元件 </router-link> |
+      <router-link to="/modal"> 常用组件 </router-link> |
+      <router-link to="/base"> html css基础 </router-link>
+      <router-link to="/webapi"> webapi </router-link>
     </div>
     <router-view />
   </div>
@@ -31,7 +26,7 @@
   .common-title {
     height: 35px;
     font-weight: 500;
-    color: #232B40;
+    color: #232b40;
     line-height: 35px;
     font-size: 18px;
     margin-top: 30px;
@@ -40,11 +35,9 @@
       line-height: 50px;
     }
   }
-
 }
 
 #nav {
-
   a {
     font-weight: bold;
     color: #2c3e50;
